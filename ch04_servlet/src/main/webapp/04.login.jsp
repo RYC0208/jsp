@@ -1,27 +1,27 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<%
-		String id = (String)session.getAttribute("idkey");
+		String id = (String)session.getAttribute("idKey");
 		if(id != null) {
 	%>
-		<%=id %>´Ô ¹Ý°©½À´Ï´Ù.<p/>
-		<a href="04.logout.jsp">·Î±×¾Æ¿ô</a>
-	<%		
-		
-		}else{
+		<%=id %>ë‹˜ ë°˜ê°‘ìŠµë‹ˆë‹¤.<p/>
+		<a href="04.logout.jsp">ë¡œê·¸ì•„ì›ƒ</a>
+	<%
+			
+		} else {
 	%>
-	<form method="post" action="LoginServlet">
-		ID : <input name = "id"><p/>
-		PW : <input type = "password" name="pwd"><p/>
-		<input type = "submit" value = "·Î±×ÀÎ">
-	</form>
+		<form method="post" action="LoginServlet">
+			ID : <input name="id"><p/>
+			PW : <input type="password" name="pwd"><p/>
+			<input type="submit" value="ë¡œê·¸ì¸">
+		</form>
 	<%} %>
 </body>
 </html>
