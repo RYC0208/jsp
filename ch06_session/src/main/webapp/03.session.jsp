@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="beanTest" class="ch04.BeanTest5"/>
-<jsp:setProperty name="beanTest" property="name" value="자바빈 사용" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	당신의 이름은 : <jsp:getProperty property="name" name="beanTest"/>
+<%
+	session.setAttribute("idKey","user01");
+	session.setAttribute("pwKey","pw1234");
+%>
+세션에 속성을 넣어줌<p/>
+세션 졍보 확인은 <a href="03_2.session.jsp">클릭하세요</a>
 </body>
 </html>

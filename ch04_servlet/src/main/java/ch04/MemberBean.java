@@ -37,5 +37,4 @@ public class MemberBean {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 }

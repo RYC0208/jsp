@@ -21,16 +21,6 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>ServletT2</display-name>
-    <servlet-name>ServletT2</servlet-name>
-    <servlet-class>ch04.ServletT2</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>ServletT2</servlet-name>
-    <url-pattern>/ServletT2</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
     <display-name>GetServletTest2</display-name>
     <servlet-name>GetServletTest2</servlet-name>
     <servlet-class>ch04.GetServletTest2</servlet-class>

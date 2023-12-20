@@ -10,5 +10,4 @@ public class BeanTest5 {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
 }
