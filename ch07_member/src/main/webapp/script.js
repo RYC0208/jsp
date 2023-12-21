@@ -15,29 +15,28 @@ function idCheck(id) {
 }
 
 function inputCheck() {
-	if(frm.id.value == ""){
-		alert("아이디를 입력해 주세요.");
+	if(frm.id.value == "") {
+		alert("아이디를 입력해 주세요");
 		frm.id.focus();
 		return;
 	}
-	
-	if(frm.pwd.value == ""){
-		alert("비밀번호를 입력해 주세요.");
+	if(frm.pwd.value == "") {
+		alert("비밀번호를 입력해 주세요");
 		frm.pwd.focus();
 		return;
 	}
-	if(frm.repwd.value == ""){
-		alert("비밀번호를 한번 더 입력해 주세요.");
+	if(frm.repwd.value == "") {
+		alert("비밀번호를 한번더 입력해 주세요");
 		frm.repwd.focus();
 		return;
 	}
 	if(frm.pwd.value != frm.repwd.value) {
-		alert("비밀번호가 다릅니다.");
+		alert("비밀번호가 다릅니다");
 		frm.repwd.focus();
 		return;
 	}
-	if(frm.name.value ==""){
-		alert("이름을 입력해 주세요.");
+	if(frm.name.value == "") {
+		alert("이름을 입력해 주세요");
 		frm.name.focus();
 		return;
 	}

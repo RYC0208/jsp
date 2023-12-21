@@ -26,22 +26,18 @@
 	            document.getElementById('postcode').value = data.zonecode;	// 우편번호
 	            
 	            if(data.userSelectedType == 'R') {
-	            	if(roadAddr != '') {
-	            		if(data.bname != '') {
-	            			extraAddr += data.bname;	// 동이름
-	            		}
-	            		if(data.buildingName != '') {
-	            			extraAddr += ', ' + data.buildingName;		//빌딩명
-	            		}	
-	            	}
+            		if(data.bname != '') {
+            			extraAddr += data.bname;	// 동이름
+            		}
+            		if(data.buildingName != '') {
+            			extraAddr += ', ' + data.buildingName;		//빌딩명
+            		}	
 	            	roadAddr += extraAddr != '' ? '(' + extraAddr + ')' : '';	// 동이름이나 빌딩명이 있으면 (동이름, 빌딩명)으로 뒤에 부착
 	            	document.getElementById('addr').value = roadAddr;	// 도로명(동이름, 빌딩명) 을 input에 넣는다
 	            } else {
-	            	if(jibunAddr != '') {
-	            		if(data.buildingName != '') {
-	            			extraAddr += data.buildingName;
-	            		}
-	            	}
+            		if(data.buildingName != '') {
+            			extraAddr += data.buildingName;
+            		}
 	            	jibunAddr += extraAddr != '' ? '(' + extraAddr + ')' : '';
 	            	document.getElementById('addr').value = jibunAddr;
 	            }
@@ -73,7 +69,7 @@
 					<td>특수기호,영문,숫자가 각1개 이상씩 들어가야 되고 8글자 이상</td>
 				</tr>
 				<tr>
-					<td>비밀번호</td>
+					<td>비밀번호 확인</td>
 					<td><input type="password" name="repwd"></td>
 					<td>위의 비밀번호를 한번 더 넣으세요</td>
 				</tr>

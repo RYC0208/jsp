@@ -53,6 +53,7 @@ public class MemberDao {
 		}
 		return flag;
 	}
+	
 	// 회원가입
 	public boolean insertMember(Member bean) {
 		boolean flag = false;
@@ -75,36 +76,26 @@ public class MemberDao {
 			if(hobby != null) {
 				for(int i=0; i<hobby.length; i++) {
 					for(int j=0; j<lists.length; j++) {
-						if(hobby[i].equals(lists[j])) 
+						if(hobby[i].equals(lists[j]))
 							hb[j] = '1';
 							break;
-						
 					}
 				}
 			}
 			pstmt.setString(10, new String(hb));
-			
 			pstmt.setString(11, bean.getJob());
 			
-			if(pstmt.executeUpdate() == 1) // insert가 잘되었으면 1반환, 잘 안되었으면 0 반
-				flag = true;					
+			if(pstmt.executeUpdate() == 1)	// insert가 잘되었으면 1 반환, 잘 안되었으면 0반환
+				flag = true;
 			
-		}catch(Exception e){
+		} catch(Exception e) {
 			e.printStackTrace();
-		}finally {
-			
-		}
+		} finally {
+			pool.freeConnection(con, pstmt);
+		}		
 		return flag;
 	}
-	
 }
-
-
-
-
-
-
-
 
 
 
