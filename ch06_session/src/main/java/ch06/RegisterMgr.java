@@ -34,5 +34,7 @@ public class RegisterMgr {
 			pool.freeConnection(con, pstmt, rs);
 		}
 		return loginFlag;
-	}	
+	}
+	
+	
 }
