@@ -1,19 +1,20 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%> -->
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>게시판 글쓰기 화면</title>
 <style>
-	table{width:550px; margin-top: 50px;}
+	table{width: 550px; margin-top: 25px;}
+
 </style>
 </head>
 <body>
 	<form action="boardPost" method="post">
-		<table align="center" >
+		<table align="center">
 			<tr>
-				<th colspan="2" bgcolor="#AFA226" height="30">글 쓰 기</th>
+				<th colspan="2" bgcolor="#FAF4C0"> 댓 글  쓰 기 </th>
 			</tr>
 			<tr>
 				<td width="15%">성명</td>
@@ -36,13 +37,17 @@
 			</tr>
 			<tr>
 				<td colspan="2" align="center">
-					<input type="submit" value="등록">&emsp;
+					<input type="submit" value="답변등록">&emsp;
 					<input type="reset" value="다시쓰기">&emsp;
-					<input type="button" value="리스트" onclick="location.href='list.jsp'">
+					<input type="button" value="뒤로" onclick="history.back;">
 				</td>
 			</tr>
 		</table>
-		<input type="hidden" name="ip" value="<%=request.getRemoteAddr() %>">
+		<input type="hidden" name="ip" value="<%=request.getRemoteAddr()%>">
+	
+	
+	
+	
 	</form>
 </body>
 </html>

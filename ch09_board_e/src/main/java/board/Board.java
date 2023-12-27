@@ -2,7 +2,7 @@ package board;
 
 public class Board {
 	private int num;
-	private String name;
+	private	String name;
 	private String subject;
 	private String content;
 	private int pos;
@@ -13,15 +13,7 @@ public class Board {
 	private String ip;
 	private int count;
 	
-	public Board() {}
-
-	
-	public Board(String name, String subject, String content, String pass, String ip) {
-		this.name = name;
-		this.subject = subject;
-		this.content = content;
-		this.pass = pass;
-		this.ip = ip;
+	public Board() {
 	}
 
 	public Board(int num, String name, String subject, String content, int pos, int ref, int depth, String regdate,
@@ -39,6 +31,8 @@ public class Board {
 		this.ip = ip;
 		this.count = count;
 	}
+	
+	
 
 	public int getNum() {
 		return num;
@@ -127,11 +121,10 @@ public class Board {
 	public void setCount(int count) {
 		this.count = count;
 	}
-
-	@Override
-	public String toString() {
-		return "Board [num=" + num + ", name=" + name + ", subject=" + subject + ", content=" + content + ", pos=" + pos
-				+ ", ref=" + ref + ", depth=" + depth + ", regdate=" + regdate + ", pass=" + pass + ", ip=" + ip
-				+ ", count=" + count + "]";
-	}
+	
+	
+	
+	
+	
+		
 }
