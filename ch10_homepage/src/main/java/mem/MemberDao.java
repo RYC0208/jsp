@@ -2,6 +2,8 @@ package mem;
 
 import java.sql.*;
 
+import common.DBConnectionMgr;
+
 public class MemberDao {
 	private DBConnectionMgr pool;
 	Connection con = null;
@@ -53,16 +55,48 @@ public class MemberDao {
 		}
 		return flag;
 	}
-	//회원가입
+	
+	// 회원가입
 	public boolean insertMember(Member bean) {
 		boolean flag = false;
 		try {
 			con = pool.getConnection();
-			sql = "insert into member values(?,?m95"
-		}
+			sql = "insert into member values(?,?,?,?,?,?,?,?,?,?,?)";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, bean.getId());
+			pstmt.setString(2, bean.getPwd());
+			pstmt.setString(3, bean.getName());
+			pstmt.setString(4, bean.getGender());
+			pstmt.setString(5, bean.getBirthday());
+			pstmt.setString(6, bean.getEmail());
+			pstmt.setString(7, bean.getZipcode());
+			pstmt.setString(8, bean.getAddress());
+			pstmt.setString(9, bean.getDetailAddress());
+			String hobby[] = bean.getHobby();
+			char hb[] = {'0','0','0','0','0'};
+			String lists[] = {"인터넷","여행","게임","영화","운동"};
+			if(hobby != null) {
+				for(int i=0; i<hobby.length; i++) {
+					for(int j=0; j<lists.length; j++) {
+						if(hobby[i].equals(lists[j]))
+							hb[j] = '1';
+							break;
+					}
+				}
+			}
+			pstmt.setString(10, new String(hb));
+			pstmt.setString(11, bean.getJob());
+			
+			if(pstmt.executeUpdate() == 1)	// insert가 잘되었으면 1 반환, 잘 안되었으면 0반환
+				flag = true;
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			pool.freeConnection(con, pstmt);
+		}		
+		return flag;
 	}
-	
-	
 }
 
 

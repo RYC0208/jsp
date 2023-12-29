@@ -8,11 +8,12 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-</head>
-<body>
 <script>
 	alert("로그아웃 되었습니다");
 	location.href = "login.jsp";
 </script>
+</head>
+<body>
+
 </body>
 </html>
