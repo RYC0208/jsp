@@ -20,7 +20,7 @@
 <title>Insert title here</title>
 <script>
 	alert("<%=msg %>");
-	location.href="login.jsp";
+	location.href="../index.jsp";
 </script>
 </head>
 <body>

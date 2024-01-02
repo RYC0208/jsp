@@ -78,9 +78,10 @@ public class MemberDao {
 			if(hobby != null) {
 				for(int i=0; i<hobby.length; i++) {
 					for(int j=0; j<lists.length; j++) {
-						if(hobby[i].equals(lists[j]))
+						if(hobby[i].equals(lists[j])) {
 							hb[j] = '1';
 							break;
+						}
 					}
 				}
 			}
@@ -98,10 +99,3 @@ public class MemberDao {
 		return flag;
 	}
 }
-
-
-
-
-
-
-

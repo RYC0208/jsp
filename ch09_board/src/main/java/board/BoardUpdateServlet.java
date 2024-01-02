@@ -40,3 +40,9 @@ public class BoardUpdateServlet extends HttpServlet {
 	}
 
 }
+
+
+
+
+
+

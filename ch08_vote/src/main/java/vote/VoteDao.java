@@ -239,3 +239,19 @@ public class VoteDao {
 		return maxNum;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

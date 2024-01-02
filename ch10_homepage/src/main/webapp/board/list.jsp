@@ -129,47 +129,18 @@
 			<%	
 			}		
 			%>
-			<%--	
-			<tr>
-				<td colspan="5"><br><br></td>
-			</tr>
-			<tr>
-				<!-- 페이지 처리 시작 -->
-				<td colspan="3">
-				 <%
-				int pageStart = (nowBlock-1) * pagePerBlock + 1;  // 어느블록에 속하는지 그 블록에 따른 첫번째 페이지
-				int pageEnd = (pageStart + pagePerBlock - 1 <= totalPage) ? pageStart + pagePerBlock-1 : totalPage;
-				if(totalPage != 0) {
-					if(nowBlock > 1) {%>
-						<a href="javascript:block('<%=nowBlock-1 %>')">prev...</a>&nbsp;
-					<%}
-					for( ;pageStart<=pageEnd; pageStart++) { %>
-						<a href="javascript:pageing('<%=pageStart %>')">[<%=pageStart %>]</a>
-					<%}
-					out.print("&nbsp;");
-					if(totalBlock > nowBlock) {%>
-						<a href="javascript:block('<%=nowBlock+1 %>')">...next</a>&nbsp;
-					<%}
-				}
-				%> 
-				</td>
-				<!-- 페이지 처리 끝-->
-				<td colspan="2" align="right">
-					<a href="post.jsp">[글쓰기]</a>&emsp;
-					<a href="javascript:list();">[처음으로]</a>
-				</td>
-				--%>
-			</tr>
 		</table>
+		
+		<!-- 페이징 시작 -->
 		<div class="textAlign">
 			<%
 				int pageStart = (nowBlock-1) * pagePerBlock + 1;  // 어느블록에 속하는지 그 블록에 따른 첫번째 페이지
-				int pageEnd = (pageStart + pagePerBlock - 1 <= totalPage) ? pageStart + pagePerBlock-1 : totalPage;
+				int pageEnd = pageStart+pagePerBlock < totalPage ? pageStart+pagePerBlock : totalPage+1;
 				if(totalPage != 0) {
 					if(nowBlock > 1) {%>
 						<a href="javascript:block('<%=nowBlock-1 %>')">prev...</a>&nbsp;
 					<%}
-					for( ;pageStart<=pageEnd; pageStart++) { %>
+					for( ;pageStart<pageEnd; pageStart++) { %>
 						<a href="javascript:pageing('<%=pageStart %>')">[<%=pageStart %>]</a>
 					<%}
 					out.print("&nbsp;");
@@ -177,13 +148,13 @@
 						<a href="javascript:block('<%=nowBlock+1 %>')">...next</a>&nbsp;
 					<%}
 				}
-				%>
-				<!-- 페이지 처리 끝-->
-					
+				%>			
 		</div>
+		
 		<div align="right">
 			<a href="post.jsp">[글쓰기]</a>&emsp;
 			<a href="javascript:list();">[처음으로]</a>
+			<a href="../index.jsp">[홈으로]</a>
 		</div>
 		<!-- 키워드 검색 -->
 		<form method="get" action="list.jsp">
@@ -208,7 +179,7 @@
 			<input type="hidden" name="nowPage" value="1">
 		</form>
 		
-		<form method="post" name="readFrm">
+		<form method="get" name="readFrm">
 			<input type="hidden" name="num">
 			<input type="hidden" name="nowPage" value="<%=nowPage %>">
 			<input type="hidden" name="keyField" value="<%=keyField %>">
@@ -217,10 +188,3 @@
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-

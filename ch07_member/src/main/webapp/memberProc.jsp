@@ -6,7 +6,7 @@
 <%
 	boolean result = mDao.insertMember(bean);
 	String msg = "회원가입에 실패하였습니다";
-	String location = "Member.jsp";
+	String location = "member.jsp";
 	if(result) {
 		msg = "회원가입이 되었습니다";
 		location = "login.jsp";

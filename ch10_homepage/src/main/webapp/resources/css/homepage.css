@@ -14,13 +14,12 @@ header>nav {float: right; margin-top: 30px; padding: 10px;}
 .nav {width: 600px; height: 20px;}
 .nav>li {float: left; width: 200px; text-align: center; position: relative; padding: 5px 0;}
 .nav>li:hover {background-color: rgb(4, 43, 116); color:#fff;}
-.submenu {display: none; position: absolute; width: 100%; margin-top: 5px; z-index: 1;}
-.submenu >li{padding: 5px 0; color: black; z-index: 2; background: rgba(255, 255, 255, 0.7);}
-.submenu >li:hover{background-color: rgb(23, 182, 235); color: white; }
+
+#login>p {margin-left: 800px;}
 
 /* 본문 이미지 */
-#imgslide {clear: both; height: 400px; position: relative; margin-top: 10px; overflow: hidden;}
-#imgslide>div {position: absolute; display: flex;}
+#imgslide {clear: both; height: 362px; position: relative; margin: 10px 0; overflow: hidden;}
+#imgslide>img {position: absolute;}
 
 /* 본문 내용 */
 /* 본문 내용 왼쪽 공지사항 */

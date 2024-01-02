@@ -18,14 +18,15 @@ $(()=>{
   });
 
   // img slide
-  let x = $('#imgslide>div')
+  let x = $('#imgslide>img');
+  let count = 4;
   setInterval(function() {
-    if(x.position().left == -2000) {
-      x.animate({left: '-=1000px'},function() {
-        x.css('left',0);
-      });
-    } else {
-      x.animate({left: '-=1000px'});
-    } 
+     count--;
+     if(count==0) {
+      x.fadeIn();
+      count = 4;
+     } else {
+      x.eq(count).fadeOut();
+     }
   }, 2000);
 })

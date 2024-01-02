@@ -25,6 +25,18 @@ public class BoardReplyServlet extends HttpServlet {
 		bDao.replyUpBoard(board.getRef(), board.getPos());
 		bDao.replyBoard(board);
 		
-		response.sendRedirect("list.jsp?nowPage="+request.getParameter("nowPage"));	
+		String nowPage = request.getParameter("nowPage");
+		response.sendRedirect("list.jsp?nowPage="+nowPage);	
 	}
 }
+
+
+
+
+
+
+
+
+
+
+

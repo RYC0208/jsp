@@ -33,7 +33,7 @@
 				<td colspan="2" align="center">
 					<input type="submit" value="로그인">&emsp;
 					<input type="reset" value="초기화">&emsp;
-					<input type="button" value="회원가입" onclick="location.href='Member.jsp'">
+					<input type="button" value="회원가입" onclick="location.href='member.jsp'">
 				</td>
 			</tr>
 		</table>

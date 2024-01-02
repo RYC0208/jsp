@@ -5,11 +5,11 @@
 	int num = Integer.parseInt(request.getParameter("num"));
 	String[] itemnum = request.getParameterValues("itemnum");
 	boolean result = vDao.updateCount(num, itemnum);
-	String msg = "투표가 등록되지 않았습니다.";
-	if(result)
-		msg = "투표가 정상적으로 등록되었습니다.";
+	String msg="투표가 등록되지 않았습니다";
+	if(result) 
+		msg= "투표가 정상적으로 등록되었습니다";
 %>
-<script type = "text/javascript">
+<script type="text/javascript">
 	alert("<%=msg %>");
 	location.href="voteList.jsp?num=<%=num%>";
 </script>

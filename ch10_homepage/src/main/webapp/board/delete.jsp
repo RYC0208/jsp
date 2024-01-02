@@ -62,7 +62,7 @@
 			</td>
 		</tr>
 		<input type="hidden" name="num" value="<%=num %>">
-		<input type="hidden" name="nowPage" value="<%=nowPage%>">
+		<input type="hidden" name="nowPage" value="<%=nowPage %>">
 	</form>
 </body>
 </html>

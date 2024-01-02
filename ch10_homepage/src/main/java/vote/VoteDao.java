@@ -1,9 +1,9 @@
 package vote;
 
 import java.sql.*;
-import common.DBConnectionMgr;
-
 import java.util.ArrayList;
+
+import common.DBConnectionMgr;
 
 public class VoteDao {
 	private DBConnectionMgr pool;
@@ -241,3 +241,19 @@ public class VoteDao {
 		return maxNum;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
