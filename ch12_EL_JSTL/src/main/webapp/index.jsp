@@ -44,16 +44,3 @@
 	 <a href="views/2_customAction/jstl.jsp">JSTL</a>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
