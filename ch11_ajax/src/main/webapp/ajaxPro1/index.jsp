@@ -126,7 +126,7 @@
 	
 	<h4>* idCheck 하기 </h4>
 	
-	<form action="idCheck.me" method="get" name="regFrm" id="enrollFrm">
+	<form action="enroll.me" method="get" name="regFrm" id="enrollFrm">
 		<p>아이디 <input name="id" id="id" required>&emsp;</p>
 		<div id="checkResult" style="font-size:0.8em; display:none"></div><br>
 		<input type="submit" value="회원가입" disabled>
